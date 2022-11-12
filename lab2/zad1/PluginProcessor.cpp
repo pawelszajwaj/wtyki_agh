@@ -155,7 +155,6 @@ void Zad1AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::M
                     {
                         sample = std::floor(channelData[smp] * steps) / steps * wetdryMix/100; //dry
                         sample += (channelData[smp]) * (1 - wetdryMix/100); //wet
-                        sample = (channelData[smp]);
                         channelData[smp] = sample; //out
                     }
 
