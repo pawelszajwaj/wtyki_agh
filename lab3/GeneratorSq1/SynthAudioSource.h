@@ -179,6 +179,10 @@ public:
         for (auto i = 0; i < tableSize; ++i)
         {
             auto sample = std::sin(currentAngle);
+            if (sample >= 0)
+              sample = 1;
+            else
+              sample = -1;
             samples[i] = (float)sample;
             currentAngle += angleDelta;
         }
