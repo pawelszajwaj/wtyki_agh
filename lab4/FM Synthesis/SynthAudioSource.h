@@ -132,6 +132,7 @@ struct SineWaveVoice : public juce::SynthesiserVoice
                     clearCurrentNote();
                     tableDelta = 0.0f;
                     tableDeltaModulator = 0.0f;     // remember to zero deltamod as well
+                    currentSegment = 0;
                     break;
                 }
             }
